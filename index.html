@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="Arab icon.jpg" />
+    <link rel="stylesheet" href="style.css" />
+
+    <meta charset="UTF-8" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimal-ui" />
+
+    <title>Arab Culture</title>
+</head>
+
+<body>
+    <video autoplay muted loop id="myVideo">
+      <source src="Video.mp4" type="video/mp4" />
+    </video>
+
+    <h1>
+        A CELEBRATION OF ARAB CULTURE <br /> 🕌🎉🌙
+    </h1>
+
+    <audio id="audio1">
+      <source
+        src="arabic traditional music video [6kKWtiNowB0].mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+
+    <div class="text">
+        <h2>Dear Friends of Arab Culture, Welcome to the Arab Culture</h2>
+        <p>
+            Below is the Arab Community Menu
+        </p>
+
+        <div class="whatsapp-image-container">
+            <img src="WhatsApp Image 2024-02-14 at 07.53.51_d70a018e.jpg" alt="WhatsApp Image" />
+        </div>
+
+        <p>
+            As we gather here under the shimmering stars of the Arabian night sky to celebrate the richness and diversity of Arab culture, we are reminded of the vibrant tapestry that encompasses our traditions, music, and heritage.
+        </p>
+
+        <p>
+            The beating heart of Arab culture resonates through its traditional music, much like the mesmerizing melodies of the oud or the rhythmic beats of the darbuka. Each note carries the echoes of centuries-old stories and the spirit of our ancestors.
+        </p>
+
+        <p>
+            Just as the aroma of Arabic spices fills the air, so too does the warmth of Arab hospitality envelop our gathering. From the intricacies of preparing a perfect cup of Arabic coffee to the art of serving baklava with grace, every gesture is an expression
+            of generosity and friendship.
+        </p>
+
+        <p>
+            Our shared love for Arabic calligraphy and its intricate designs serves as a testament to our reverence for beauty and artistry. Each stroke of the pen tells a story, echoing the wisdom of ancient poets and scholars.
+        </p>
+
+        <p>
+            As we come together to honor our culture, let us embrace the diversity that unites us and celebrate the enduring legacy of Arab civilization. May our traditions continue to flourish, enriching the world with their timeless beauty and profound wisdom.
+        </p>
+
+
+        <p>Heartfelt regards</p>
+        <p><i>Arab Community.</i></p>
+    </div>
+
+
+    <audio id="audio2" controls hidden>
+      <source src="./assets/music/New_Project.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay">
+        <div class="overlay-content">
+            <h2>Welcome Student!</h2>
+            <p>Do you wish to know about Arab Culture?</p>
+            <button id="enterButton">Enter</button>
+        </div>
+    </div>
+
+    <script>
+        const audio1 = document.getElementById("audio1");
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const overlay = document.getElementById("overlay");
+            const enterButton = document.getElementById("enterButton");
+
+            // Show the overlay when the page loads
+            overlay.style.display = "flex";
+
+            // Hide the overlay when the "Enter" button is clicked
+            enterButton.addEventListener("click", function() {
+                overlay.style.display = "none";
+
+                playAudio1();
+            });
+        });
+
+        function playAudio1() {
+            audio1.play();
+        }
+
+        function playAudio2() {
+            audio2.play();
+        }
+
+        const audio2 = document.getElementById("audio2");
+        audio1.addEventListener("ended", () => {
+            playAudio2();
+        });
+    </script>
+</body>
+
+</html>
